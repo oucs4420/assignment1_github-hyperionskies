@@ -11,7 +11,7 @@ using namespace std;
 int main( int argc, char* argv[] )
 {
     // output file name (argv[0])
-    std::cout << argv[0] << '\n';
+    std::cout << "program: " << argv[0] << '\n';
     
     // open file CString(argv[arg]), count lines, output lines, close file. loop
     for (int arg = 1; arg < argc; ++arg)
@@ -26,7 +26,7 @@ int main( int argc, char* argv[] )
                 count++;
             }
             myfile.close();
-            std::cout << argv[arg] << ": " << count << '\n';
+            std::cout << " " << argv[arg] << ": " << count << '\n';
         }
         else
         {
