@@ -17,19 +17,20 @@ int main( int argc, char* argv[] )
     for (int arg = 1; arg < argc; ++arg)
     {
         int count = 0;
-        ifstream myfile (CString(argv[arg]));
+        ifstream myfile (argv[arg]);
         if (myfile.is_open())
         {
+            string line;
             while ( getline (myfile,line) )
             {
                 count++;
             }
             myfile.close();
-            std::cout << argv[arg] + ": " + count << '\n';
+            std::cout << argv[arg] << ": " << count << '\n';
         }
         else
         {
-            std::cout << argv[arg] + ": " + "could not be opened" << '\n';
+            std::cout << argv[arg] << ": could not be opened" << '\n';
         }
     }
 
