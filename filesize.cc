@@ -30,7 +30,7 @@ int main( int argc, char* argv[] )
         }
         else
         {
-            std::cout << argv[arg] << ": could not be opened" << '\n';
+            std::cout << argv[arg] << ": -1" << '\n';
         }
     }
 
